@@ -18,4 +18,4 @@ Staff.prototype.calcTotalSalary = function() {
 Staff.prototype.calcRank = function() {
     var showRank = getRank(this.time);
     return showRank;
-}
+};

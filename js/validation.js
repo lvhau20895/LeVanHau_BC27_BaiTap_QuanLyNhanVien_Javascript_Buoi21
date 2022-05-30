@@ -48,9 +48,9 @@ function validation() {
     }
 
     // Kiểm tra mật khẩu (pass) phải có ít nhất 1 ký tự in hoa, 1 ký tự số, 1 ký tự đặc biệt và không để trống
-    var isUpperCase = /[A-Z]/g;
-    var isNum = /[0-9]/g
-    var isChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var isUpperCase = /[A-Z]/g; // ký tự in hoa
+    var isNum = /[0-9]/g; // ký tự số
+    var isChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/; // ký tự đặc biệt
     if (!isRequired(staff.pass)) {
         isValid = false;
         getId("tbMatKhau").style.display = "block";
