@@ -82,7 +82,8 @@ function display(staffs) {
                 <td>${staff.calcTotalSalary()}</td>
                 <td>${staff.calcRank()}</td>
                 <td>
-                    <button class="btn btn-info" onclick="editStaff('${staff.account}')">Edit</button>
+                    <button class="btn btn-info" onclick="editStaff('${staff.account}')" data-toggle="modal"
+                    data-target="#myModal">Edit</button>
                     <button class="btn btn-danger" onclick="deleteStaff('${staff.account}')">Delete</button>
                 </td>
             </tr>
