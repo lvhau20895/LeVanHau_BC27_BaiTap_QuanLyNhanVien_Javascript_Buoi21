@@ -3,6 +3,7 @@ function validation() {
     var staff = getStaff();
     var isValid = true;
     // Kiểm tra tên tài khoản nhân viên (account) phải từ 4 - 6 ký tự và không để trống
+    var isAccount = new RegExp("^-?[0-9][0-9,\.]+$");
     if (!isRequired(staff.account)) {
         isValid = false;
         getId("tbTKNV").style.display = "block";
@@ -11,8 +12,13 @@ function validation() {
         isValid = false;
         getId("tbTKNV").style.display = "block";
         getId("tbTKNV").innerHTML = "Tài khoản phải từ 4 - 6 ký tự";
+    } else if(!isAccount.test(staff.account)) {
+        isValid = false;
+        getId("tbTKNV").style.display = "block";
+        getId("tbTKNV").innerHTML = "Tài khoản phải là số";
     } else {
         getId("tbTKNV").style.display = "none";
+
     }
 
     // Kiểm tra tên nhân viên (name) phải là chữ và không được để trống
