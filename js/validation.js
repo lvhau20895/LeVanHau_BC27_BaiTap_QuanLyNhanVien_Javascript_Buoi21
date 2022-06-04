@@ -11,7 +11,7 @@ function validation() {
     } else if (!checkLength(staff.account.length, 4, 6)) {
         isValid = false;
         getId("tbTKNV").style.display = "block";
-        getId("tbTKNV").innerHTML = "Tài khoản phải từ 4 - 6 ký tự";
+        getId("tbTKNV").innerHTML = "Tài khoản phải từ 4 - 6 ký số";
     } else if(!isAccount.test(staff.account)) {
         isValid = false;
         getId("tbTKNV").style.display = "block";
